@@ -5,7 +5,7 @@ angular.module('starter.controllers')
   $scope.playlist = [];
 
   $scope.currentSource = false;
-  $scope.looping = false;
+  $scope.looping = true;
   $scope.playing = false;
 
   var connection = new RTCMultiConnection('haryanvi-radio-kasoot');
