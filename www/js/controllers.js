@@ -1,13 +1,13 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-  $scope.playNext = function (){
-    var event = new Event('next-song');
+// .controller('DashCtrl', function($scope) {
+//   $scope.playNext = function (){
+//     var event = new Event('next-song');
 
-    // Dispatch the event.
-    document.dispatchEvent(event);
-  }
-})
+//     // Dispatch the event.
+//     document.dispatchEvent(event);
+//   }
+// })
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called

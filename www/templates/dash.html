@@ -1,0 +1,54 @@
+<ion-view>
+  <ion-content class="padding">
+
+    <div class="row">
+      <div class="col col-90">
+        <label class="button button-block button-royal">
+            <input type="file" id="files" name="files[]" multiple/>
+            Choose Songs
+        </label>
+      </div>
+      <div class="col col-10">
+        <button class="button button-block button-assertive add-new-song">
+            Add Song
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="player-controls">
+        <a class="button button-icon icon ion-ios-rewind"
+           ng-click="playPrevious()">
+        </a>
+
+        <a class="button button-icon icon"
+           ng-class="{'ion-ios-pause': playing, 'ion-ios-play': !playing}"
+           ng-click="playing ? stop() : playNext()">
+        </a>
+
+        <a class="button button-icon icon ion-ios-fastforward"
+           ng-click="playNext()">
+        </a>
+
+        <a class="button button-icon icon"
+           ng-class="{'positive ion-ios-infinite': looping, 'ion-ios-infinite-outline': !looping}"
+           ng-click="toggleLooping()">
+        </a>
+      </div>
+    </div>
+
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Search Songs" ng-model="search">
+      </label>
+
+      <a class="item positive item-icon-right" ng-click="play($index)" ng-repeat="song in playlist | filter: search">
+        {{song.name}}
+        <!-- <i class="icon ion-radio-waves" ng-if="currentSong==song"></i> -->
+        <i class="icon positive"><ion-spinner icon="lines" ng-if="currentSong==song"></ion-spinner></i>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

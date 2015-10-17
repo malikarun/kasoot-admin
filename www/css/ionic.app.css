@@ -9294,3 +9294,19 @@ input, button[disabled] {
 
 audio, video {
   display: none; }
+
+.player-controls {
+  display: flex;
+  justify-content: space-around; }
+
+input[type=file] {
+  display: none; }
+
+input[type=range] {
+  border: none; }
+
+.spinner svg {
+  width: 28px;
+  height: 28px;
+  stroke: red;
+  fill: red; }
